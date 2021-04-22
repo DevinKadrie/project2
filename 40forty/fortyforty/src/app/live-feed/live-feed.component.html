@@ -1,0 +1,45 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<div class="row">
+    <div class="col-lg-9">
+        <div class="row justify-content-center">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#post_modal">New Post</button>
+        </div>
+        <div class="row justify-content-center">
+            <div class="card bg-light mb-3 text-center" style="width: 800px;">
+                <h5 class="card-header text-left">
+                    <img src="{{author.avatar_url}}" style="max-width: 64px; max-height: 64px;" /> {{author.firstName}} {{author.lastName}}</h5>
+                <div class="card-body">
+                    <p>{{text}}</p>
+                    <img src='{{media_url}}' class="mr-3" style="max-width: 100%" />
+                </div>                
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div style="margin-right: 25px">
+            <app-friends></app-friends>
+        </div>
+    </div>
+</div>
+<div class="modal" tabindex="-1" role="dialog" id="post_modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="postFormBody">New Post</label>
+                        <textarea class="form-control" id="inputDesc" rows="3" [(ngModel)]='newPostBody' [ngModelOptions]="{standalone: true}"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="form-group">
+                <label for="File">Post image</label>
+                <input type="file" class="form-control-file" id="FileUp" (change)="onFileSelected($event)">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button id="SubmitPost" type="button" class="btn btn-primary" data-dismiss="modal" (click)="sendMessage()">Post</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+#dev added
+.idea/
+40forty/.idea/
+40forty/.gradle/
+40forty/.settings/
+/.idea
+/40forty/.idea
+/40forty/.idea/
+
+# this should be removed when deployed...
+# actually maybe it should stay because the server will
+# build it anyways. ok!
+/40forty/build/
+/40forty/build
+
+40forty/.classpath
+40forty/.project
+
+node_modules
+/40forty/fortyforty/node_modules
