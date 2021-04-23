@@ -69,6 +69,11 @@ npm i
 http://localhost:40forty
 ```
 
+When you enter the site, you should see this
+login page:![enter image description here](https://github.com/DevinKadrie/project2/blob/main/40forty_Login.png)
+
+after login, you should see this
+feed page: ![enter image description here](https://github.com/DevinKadrie/project2/blob/main/40forty_Feed.png)
 ## **License**
 
 This project uses the following license: [<The MIT License>](https://www.mit.edu/~amini/LICENSE.md).
