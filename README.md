@@ -1,4 +1,4 @@
-# 40forty - A ~~Social Media~~
+# 40forty - A Social Meduia Application
 
 ## Project Description
 
